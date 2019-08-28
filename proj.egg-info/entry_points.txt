@@ -1,0 +1,4 @@
+[console_scripts]
+proj = proj.__main__:main
+proj-faust = faustapp.app:main
+

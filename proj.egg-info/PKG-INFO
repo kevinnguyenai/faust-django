@@ -1,0 +1,55 @@
+Metadata-Version: 1.2
+Name: proj
+Version: 0.9.3
+Summary: Example Django project using Faust.
+Home-page: http://faust.readthedocs.io
+Author: Robinhood Markets, Inc.
+Author-email: opensource@robinhood.com
+License: BSD
+Description: Directory Layout
+        
+        - ``proj/``
+        
+          This is the main Django project.
+        
+          We have also added a ``proj/__main__.py`` that executes if you do
+          ``python -m proj``, and it will work as the manage.py for the project.
+        
+          This is also installed by setup.py as an entry point, so after
+          ``python setup.py install`` or ``python setup.py develop`` the
+          ``proj`` command will be available::
+        
+                $ python setup.py develop
+                $ proj runserver
+        
+            The above is the same as running ``manage.py runserver``, but it will
+            be installed in the system path.
+        
+        - ``faustapp/``
+        
+            This is a Django App that defines the Faust app used by the project,
+            and it also configures Faust using Django settings.
+        
+            This faustapp is also installed by setup.py as the ``proj-faust`` program,
+            and can be used to start a Faust worker for your Django project by doing::
+        
+                $ python setup.py develop
+                $ proj-faust worker -l info
+        
+        - ``accounts/``
+        
+            This is an example Django App with stream processors.
+        
+Platform: any
+Classifier: Development Status :: 4 - Beta
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Operating System :: POSIX
+Classifier: Operating System :: POSIX :: Linux
+Classifier: Operating System :: MacOS :: MacOS X
+Classifier: Operating System :: POSIX :: BSD
+Classifier: Operating System :: Microsoft :: Windows
+Classifier: Topic :: Framework :: Django
+Requires-Python: >=3.6.0
