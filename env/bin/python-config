@@ -1,4 +1,4 @@
-#!/home/docker/workspace/faust-django/env/bin/python
+#!/projects/faust-django/env/bin/python
 
 import sys
 import getopt

@@ -1,4 +1,4 @@
-#!/home/docker/workspace/faust-django/env/bin/python3.6
+#!/projects/faust-django/env/bin/python3
 # -*- coding: utf-8 -*-
 import re
 import sys

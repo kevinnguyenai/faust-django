@@ -1,0 +1,5 @@
+django
+faust[rocksdb,uvloop,fast,redis,setproctitle]
+eventlet
+aioeventlet
+Cython

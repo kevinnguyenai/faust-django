@@ -7,6 +7,7 @@ Please following the preparation environment to your system before you start usi
 [https://python-rocksdb.readthedocs.io/en/latest/installation.html](https://python-rocksdb.readthedocs.io/en/latest/installation.html)
 This requires librocksdb-dev>=5.0
 ```
+
 apt-get install python-virtualenv python-dev librocksdb-dev
 virtualenv venv
 source venv/bin/activate
@@ -14,25 +15,40 @@ pip install python-rocksdb
 ```
 if your librocksdb-dev is previous version please following
 ```
-apt-get install build-essential libsnappy-dev zlib1g-dev libbz2-dev libgflags-dev
+sudo apt-get install build-essential autoconf libtool pkg-config python-opengl python-pil python-pyrex python-pyside.qtopengl idle-python2.7 qt4-dev-tools qt4-designer libqtgui4 libqtcore4 libqt4-xml libqt4-test libqt4-script libqt4-network libqt4-dbus python-qt4 python-qt4-gl libgle3 python-dev
+sudo apt-get install build-essential libsnappy-dev zlib1g-dev libbz2-dev libgflags-dev cmake
 git clone https://github.com/facebook/rocksdb.git
 cd rocksdb
 mkdir build && cd build
 cmake ..
 make
-make install-shared INSTALL_PATH=/usr
-export CPLUS_INCLUDE_PATH=${CPLUS_INCLUDE_PATH}:`pwd`/../include
-export LD_LIBRARY_PATH=${LD_LIBRARY_PATH}:`pwd`
-export LIBRARY_PATH=${LIBRARY_PATH}:`pwd`
+cd ..
+sudo make install-shared INSTALL_PATH=/usr
+sudo cp -r /opt/rocksdb/include/* /usr/local/include
+export CPLUS_INCLUDE_PATH=/usr/local/include
+export LD_LIBRARY_PATH=/opt/rocksdb
+export LIBRARY_PATH=/opt/rocksdb
 ```
 ##### 2. Please ensure we have at least python3.6 for ready to use if not it's have to install manually by following this link
 [https://websiteforstudents.com/installing-the-latest-python-3-7-on-ubuntu-16-04-18-04/](https://websiteforstudents.com/installing-the-latest-python-3-7-on-ubuntu-16-04-18-04/)
+###### 2.1 python3.6
 ```
 sudo apt update
 sudo apt install software-properties-common
 sudo add-apt-repository ppa:deadsnakes/ppa
 sudo apt update
 sudo apt install python3.6 python3.6-dev python3.6-venv
+```
+###### 2.2 python3
+```
+sudo apt update
+sudo apt install software-properties-common
+sudo apt-get install python3 python3-pip python3-venv python3-dev
+python3 -m pip install virtualenv
+cd /projects/faust-django
+python3 -m virtualenv --python=python3 env
+source env/bin/activate
+pip install -r requirements/dev.txt
 ```
 
 Directory Layout

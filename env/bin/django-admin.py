@@ -1,4 +1,4 @@
-#!/home/docker/workspace/faust-django/env/bin/python3.6
+#!/projects/faust-django/env/bin/python3
 from django.core import management
 
 if __name__ == "__main__":
