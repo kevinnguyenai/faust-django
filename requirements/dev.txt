@@ -3,3 +3,7 @@ faust[rocksdb,uvloop,fast,redis,setproctitle]
 eventlet
 aioeventlet
 Cython
+configparser
+django-mysql
+mysqlclient
+pyMySQL

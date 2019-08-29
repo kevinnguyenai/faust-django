@@ -1,6 +1,6 @@
 KeyNote:
 ```
-I see the missing for someone and especially by me when deploy environment to run faust django example from faust
+I see the missing for someone and especially to me in this case when deploy environment to run faust django example from faust
 Please following the preparation environment to your system before you start using this repos
 ```
 #### 1. install rocksdb by following guide
@@ -44,11 +44,13 @@ sudo apt install python3.6 python3.6-dev python3.6-venv
 sudo apt update
 sudo apt install software-properties-common
 sudo apt-get install python3 python3-pip python3-venv python3-dev
+sudo apt-get install libmysqlclient-dev mysql-client
 python3 -m pip install virtualenv
 cd /projects/faust-django
 python3 -m virtualenv --python=python3 env
 source env/bin/activate
 pip install -r requirements/dev.txt
+
 ```
 
 Directory Layout
