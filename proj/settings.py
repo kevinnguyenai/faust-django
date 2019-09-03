@@ -17,7 +17,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 
 # Faust settings (used in faustapp/app.py)
-FAUST_BROKER_URL = 'kafka://localhost:9092'
+FAUST_BROKER_URL = 'kafka://172.16.0.20:9092'
 FAUST_STORE_URL = 'rocksdb://'
 
 

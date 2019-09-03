@@ -46,7 +46,7 @@ deactivate () {
 # unset irrelevant variables
 deactivate nondestructive
 
-VIRTUAL_ENV="/projects/faust-django/env"
+VIRTUAL_ENV="/home/debian/workplace/faust-django/env"
 export VIRTUAL_ENV
 
 _OLD_VIRTUAL_PATH="$PATH"

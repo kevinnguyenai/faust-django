@@ -24,7 +24,7 @@ Description: KeyNote:
         if your librocksdb-dev is previous version please following
         ```
         sudo apt-get install build-essential autoconf libtool pkg-config python-opengl python-pil python-pyrex python-pyside.qtopengl idle-python2.7 qt4-dev-tools qt4-designer libqtgui4 libqtcore4 libqt4-xml libqt4-test libqt4-script libqt4-network libqt4-dbus python-qt4 python-qt4-gl libgle3 python-dev
-        sudo apt-get install build-essential libsnappy-dev zlib1g-dev libbz2-dev libgflags-dev cmake
+        sudo apt-get install build-essential libsnappy-dev zlib1g-dev libbz2-dev libgflags-dev cmake liblz4-dev
         git clone https://github.com/facebook/rocksdb.git
         cd rocksdb
         mkdir build && cd build
@@ -33,7 +33,7 @@ Description: KeyNote:
         cd ..
         sudo make install-shared INSTALL_PATH=/usr
         sudo cp -r /opt/rocksdb/include/* /usr/local/include
-        export CPLUS_INCLUDE_PATH=/usr/local/include
+        export CPLUS_INCLUDE_PATH=/opt/rocksdb/include
         export LD_LIBRARY_PATH=/opt/rocksdb
         export LIBRARY_PATH=/opt/rocksdb
         ```
@@ -42,7 +42,7 @@ Description: KeyNote:
         ###### 2.1 python3.6
         ```
         sudo apt update
-        sudo apt install software-properties-common
+        sudo apt install software-properties-common liblz4-dev
         sudo add-apt-repository ppa:deadsnakes/ppa
         sudo apt update
         sudo apt install python3.6 python3.6-dev python3.6-venv

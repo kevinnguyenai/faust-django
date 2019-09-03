@@ -28,7 +28,7 @@ def _deactivate(args):
 _deactivate(["nondestructive"])
 aliases["deactivate"] = _deactivate
 
-$VIRTUAL_ENV = r"/projects/faust-django/env"
+$VIRTUAL_ENV = r"/home/debian/workplace/faust-django/env"
 
 $_OLD_VIRTUAL_PATH = $PATH
 $PATH = $PATH[:]

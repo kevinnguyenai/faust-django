@@ -1,4 +1,4 @@
-#!/projects/faust-django/env/bin/python
+#!/home/debian/workplace/faust-django/env/bin/python
 # EASY-INSTALL-ENTRY-SCRIPT: 'sqlparse','console_scripts','sqlformat'
 __requires__ = 'sqlparse'
 import re

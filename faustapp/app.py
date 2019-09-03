@@ -7,7 +7,11 @@ os.environ.setdefault('FAUST_LOOP', 'eventlet')
 # set the default Django settings module for the 'faust' program.
 os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'proj.settings')
 
-app = faust.App('django-proj', autodiscover=True, origin='faustapp')
+app = faust.App('django-proj', autodiscover=True, 
+    broker='kafka://172.16.0.20:9092', 
+    origin='faustapp',
+    value_serializer='json'
+    )
 
 
 @app.on_configured.connect

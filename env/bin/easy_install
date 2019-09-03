@@ -1,4 +1,4 @@
-#!/projects/faust-django/env/bin/python
+#!/home/debian/workplace/faust-django/env/bin/python
 # EASY-INSTALL-ENTRY-SCRIPT: 'setuptools','console_scripts','easy_install'
 __requires__ = 'setuptools'
 import re
