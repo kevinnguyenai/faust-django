@@ -9,6 +9,8 @@ accounts/migrations/__init__.py
 faustapp/__init__.py
 faustapp/app.py
 faustapp/apps.py
+faustapp/urls.py
+faustapp/views.py
 faustapp/migrations/__init__.py
 proj/__init__.py
 proj/__main__.py

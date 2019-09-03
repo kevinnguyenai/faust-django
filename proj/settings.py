@@ -17,7 +17,11 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 
 # Faust settings (used in faustapp/app.py)
+<<<<<<< HEAD
 FAUST_BROKER_URL = 'kafka://172.16.0.20:9092'
+=======
+FAUST_BROKER_URL = 'kafka://172.30.13.71:9092'
+>>>>>>> 566699e685157746e032ada6ea169493ed720604
 FAUST_STORE_URL = 'rocksdb://'
 
 
@@ -143,3 +147,4 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/1.11/howto/static-files/
 
 STATIC_URL = '/static/'
+STATIC_ROOT = os.path.join(BASE_DIR, "static/")
