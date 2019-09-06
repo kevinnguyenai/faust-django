@@ -17,11 +17,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 
 # Faust settings (used in faustapp/app.py)
-<<<<<<< HEAD
 FAUST_BROKER_URL = 'kafka://172.16.0.20:9092'
-=======
-FAUST_BROKER_URL = 'kafka://172.30.13.71:9092'
->>>>>>> 566699e685157746e032ada6ea169493ed720604
 FAUST_STORE_URL = 'rocksdb://'
 
 
@@ -95,7 +91,7 @@ DATABASES = {
         'ENGINE': 'django.db.backends.mysql', 
         'NAME': 'naf2',
         'USER': 'naf2',
-        'PASSWORD': 'naf2@123#',
+        'PASSWORD': 'naf2!123',
         'HOST': '172.27.6.132',   # Or an IP Address that your DB is hosted on
         'PORT': '3306',
         #'OPTIONS': {'charset': 'utf8'},

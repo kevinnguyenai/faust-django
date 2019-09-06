@@ -1,9 +1,11 @@
 README.rst
 setup.py
 accounts/__init__.py
+accounts/admin.py
 accounts/agents.py
 accounts/apps.py
 accounts/models.py
+accounts/signals.py
 accounts/migrations/0001_initial.py
 accounts/migrations/__init__.py
 faustapp/__init__.py
